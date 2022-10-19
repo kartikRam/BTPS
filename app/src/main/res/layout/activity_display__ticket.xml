@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Display_Ticket">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp"
+                android:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="33dp"
+                android:text="T"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="135dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/usertype"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="-150dp"
+                android:layout_marginTop="80dp"
+                android:text="Passenger"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="135dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="60dp"
+            android:text="Ticket Details"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="136dp" />
+
+        <TextView
+            android:id="@+id/src_and_dest"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:text="    Source and Destination"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="95dp"
+            tools:layout_editor_absoluteY="199dp" />
+
+        <TextView
+            android:id="@+id/expires"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="19dp"
+            android:drawableStart="@drawable/time"
+            android:text="    Created on:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="95dp"
+            tools:layout_editor_absoluteY="238dp" />
+
+        <TextView
+            android:id="@+id/totalkms"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_marginTop="19dp"
+            android:drawableStart="@drawable/kilometer"
+            android:text=" Total kms: 57"
+            android:textSize="25sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="280dp" />
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_marginTop="19dp"
+            android:drawableStart="@drawable/money"
+            android:text="  Amount:"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="280dp" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

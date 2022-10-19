@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer"
+    android:orientation="vertical"
+    android:background="@drawable/profile_background"
+    tools:context=".Pass">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Pass:"
+        android:textSize="42sp"
+        android:textColor="#FF9800"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        tools:ignore="MissingConstraints" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="310dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="9dp"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:id="@+id/pass_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:text="Fill Appropriate Details:"
+                android:textColor="#FF9800"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:focusable="false"
+                android:hint="Source"
+                android:textColorHint="#FF9800">
+
+                <EditText
+                    android:id="@+id/source_details_bus_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:focusable="false"
+                android:hint="Destination"
+                android:textColorHint="#FF9800">
+
+                <EditText
+                    android:id="@+id/destination_details_bus_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="22dp"
+                android:focusable="false"
+                android:hint="User Type"
+                android:textColorHint="#FF9800">
+
+                <EditText
+                    android:id="@+id/user_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:text="Passenger"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="Select Month"
+                android:textColor="#ff9800"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/months"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp" />
+
+            <Button
+                android:id="@+id/show_pass_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:text="Next"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:backgroundTint="#FF9800" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/select_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Select Pass Type:"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#FF9800"/>
+            <RadioGroup
+                android:id="@+id/choose_pass_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/local_pass_type"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Local Pass"/>
+                <RadioButton
+                    android:id="@+id/express_pass_type"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Express Pass"/>
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/show_pass_payment"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="#ff9800"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/show_payment"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                android:text="Payment"
+                android:layout_marginBottom="40dp"
+                android:gravity="center_horizontal"
+                android:textColor="#FF9800"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:focusable="false"
+                android:textColorHint="#FF9800"
+                android:hint="Total Kilometer">
+                <EditText
+                    android:id="@+id/total_kilometer_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/total_kilometer"
+                    android:text="56"
+                    android:focusable="false"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:focusable="false"
+                android:textColorHint="#FF9800"
+                android:hint="Total Payment">
+                <EditText
+                    android:id="@+id/rupees"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/rupee_icon"
+                    android:text="560"
+                    android:focusable="false"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/store_pass"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:layout_gravity="center_horizontal"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="#ff9800"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ask_id_card"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                android:text="Upload ID Card "
+                android:layout_marginBottom="32dp"
+                android:gravity="center_horizontal"
+                android:textColor="#FF9800"
+                android:textStyle="bold"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/identity_card"
+                android:onClick="saveData"
+                android:layout_width="130dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="130dp"
+                android:src="@drawable/worker_id"
+                />
+
+
+
+            <Button
+                android:id="@+id/store_pass_student"
+                android:layout_marginTop="50dp"
+                android:onClick="upload_data_to_db"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:layout_gravity="center_horizontal"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="#ff9800"/>
+
+            <TextView
+                android:id="@+id/marquee_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="Make Sure Your Id Photo is well Lit and Captured clearly"
+                android:textColor="#F30606" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="fill_vertical"
+    android:id="@+id/buses_hire"
+    android:layout_margin="15dp"
+    app:cardCornerRadius="40dp"
+    app:cardElevation="9dp"
+    >
+
+    <LinearLayout
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/hire_bus" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:id="@+id/bus_number_hire_bus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="GJ18MCQ678"
+                android:textColor="#FF9800"
+                android:textAlignment="center"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/bus_rupees_hire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF9800"
+                android:hint="Rupees 5000"
+                android:drawableEnd="@drawable/rupee_icon"
+                android:textAlignment="center"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/bus_capacity_hire"
+                android:layout_width="wrap_content"
+                android:textColor="#FF9800"
+                android:layout_height="wrap_content"
+                android:text="Capacity: 60"
+                android:textAlignment="center"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

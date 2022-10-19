@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer"
+    android:background="@drawable/profile_background"
+    android:orientation="vertical"
+    tools:context=".DepoManagerAddBusForm">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Bus:"
+        android:textSize="42sp"
+        android:textColor="#FF9800"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="360dp"
+        android:layout_height="550dp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="9dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fill Details:"
+                android:textSize="32sp"
+                android:layout_marginBottom="30dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#FF9800"
+                android:textStyle="bold" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:focusable="false"
+                android:textColorHint="#FF9800"
+                android:hint="Bus-Number">
+
+                <EditText
+                    android:id="@+id/add_bus_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:textColor="@color/black"
+                    android:inputType="text"
+                    android:textStyle="bold"
+                    android:textSize="23sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:focusable="false"
+                android:textColorHint="#FF9800"
+                android:hint="Bus-Time">
+
+                <EditText
+                    android:id="@+id/add_bus_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:completionThreshold="1"
+                    android:textSize="23sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="22dp"
+                android:focusable="false"
+                android:textColorHint="#FF9800"
+                android:hint="Bus-Source">
+                <EditText
+                    android:id="@+id/add_bus_source"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="23sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="22dp"
+                android:focusable="false"
+                android:textColorHint="#FF9800"
+                android:hint="Via">
+                <EditText
+                    android:id="@+id/add_bus_via"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:inputType="text"
+                    android:textStyle="bold"
+                    android:textSize="23sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="22dp"
+                android:focusable="false"
+                android:textColorHint="#FF9800"
+                android:hint="Bus-Destination">
+                <EditText
+                    android:id="@+id/add_bus_destination"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:inputType="text"
+                    android:textSize="23sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="22dp"
+                android:focusable="false"
+                android:textColorHint="#FF9800"
+                android:hint="Conductor-Id">
+                <EditText
+                    android:id="@+id/add_conductor_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:inputType="text"
+                    android:textStyle="bold"
+                    android:textSize="23sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/add_bus_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:text="Add +"
+                android:textColor="#FFFFFF"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:backgroundTint="#FF9800" />
+        </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

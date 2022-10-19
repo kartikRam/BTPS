@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile_background_image"
+    android:orientation="vertical"
+    tools:context=".InstituteHome">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="370dp"
+        android:layout_height="520dp"
+        android:layout_marginTop="120dp"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="9dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/institute_image_profile"
+                android:src="@drawable/profile"
+                android:onClick="saveData"
+                android:layout_width="130dp"
+                android:layout_height="150dp"/>
+            <TextView
+                android:id="@+id/institute_name_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Institute Name"
+                android:textSize="28sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#FF9800"
+                android:textStyle="bold" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:focusable="false"
+                        android:textColorHint="#FF9800"
+                        android:hint="Institute E-mail">
+
+                        <EditText
+                            android:id="@+id/email_institute_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=" temp@temp.com"
+                            android:focusable="false"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/black"
+                            android:drawableStart="@drawable/profile_email"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:focusable="false"
+                        android:textColorHint="#FF9800"
+                        android:hint="Institute Name">
+
+                        <EditText
+                            android:id="@+id/name_institute_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=" Ramchandani kartik"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/black"
+                            android:drawableStart="@drawable/user_name_profile"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:focusable="false"
+                        android:textColorHint="#FF9800"
+                        android:hint="Institute Id">
+
+                        <EditText
+                            android:id="@+id/institute_id_institute_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="11"
+                            android:drawableStart="@drawable/student_enrollment_no"
+                            android:focusable="false"
+                            android:maxEms="1"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:focusable="false"
+                        android:textColorHint="#FF9800"
+                        android:hint="Institute Address">
+
+                        <EditText
+                            android:id="@+id/address_institute_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/address"
+                            android:gravity="center_horizontal"
+                            android:inputType="textPostalAddress"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:focusable="false"
+                        android:textColorHint="#FF9800"
+                        android:hint="Institute Contact Number">
+
+                        <EditText
+                            android:id="@+id/contact_institute_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:drawableStart="@drawable/profile_phone"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:inputType="number"
+                            android:textSize="20sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/update_institute_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:backgroundTint="#FF9800"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:layout_gravity="center_horizontal"
+        />
+
+</LinearLayout>

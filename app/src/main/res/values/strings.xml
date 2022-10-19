@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">BTPS1</string>
+    <string name="qr_code">qr_code</string>
+    <string name="enter_your_info">Enter your info</string>
+    <string name="generate_qr_code">Generate QR Code</string>
+    <string name="title_activity_pass__test">Pass_Test</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
+</resources>

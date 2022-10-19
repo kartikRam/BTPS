@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundimage"
+    tools:context=".InstituteIndex">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="BTPS"
+        android:textColor="@color/white"
+        android:layout_marginBottom="40dp"
+        android:textSize="52sp"
+        android:textStyle="bold" />
+    <RelativeLayout
+        android:id="@+id/user_data"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/institute_name_dashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Institute_Name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentLeft="true"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/institute_image_dashboard"
+            android:layout_width="90dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/profile"/>
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/user_data"
+        >
+
+        <GridLayout
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/user_image_dashboard"
+            android:columnCount="2"
+            android:rowCount="3">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/institute_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="0"
+                android:layout_gravity="fill_vertical"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="9dp"
+
+                >
+
+                <LinearLayout
+                    android:padding="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/profile_logo_dashboard" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PROFILE"
+                        android:textAlignment="center"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/institute_add_student"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_gravity="fill"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="9dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/add_student_logo_dashboard"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ADD STUDENT"
+                        android:textAlignment="center"
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/institute_remove_student"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_gravity="fill"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="9dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/remove_student_logo_dashboard" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="REMOVE STUDENT"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/institute_edit_student"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_gravity="fill"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="9dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/edit_student_logo_dashboard" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EDIT STUDENT"
+                        android:textAlignment="center"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/institute_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="9dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/logout_logo_dashboard" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LOGOUT"
+                        android:textAlignment="center"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile_background"
+    tools:context=".DisplayPass"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Bus Pass:"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"
+        android:textColor="#FF9800"
+        android:textSize="42sp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="350dp"
+            android:layout_height="500dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="9dp">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:id="@+id/verification_failed"
+                    android:layout_width="380dp"
+                    android:visibility="gone"
+                    android:layout_height="500dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="130dp"
+                        android:text="Verification Failed"
+                        android:textStyle="bold"
+                        android:textSize="32sp"
+                        android:textColor="#FF9800"
+                        />
+
+                </LinearLayout>
+            <LinearLayout
+                android:id="@+id/not_created"
+                android:layout_width="380dp"
+                android:layout_height="500dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Bus Pass Verification Status:"
+                    android:textSize="21sp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#FF9800"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:id="@+id/status_pass_verified"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center_horizontal"
+                    />
+                <ProgressBar
+                    android:id="@+id/p_Bar"
+                    android:layout_marginTop="40dp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="false"
+                    android:max="3"
+                    android:layout_gravity="center_horizontal"
+                    android:minWidth="200dp"
+                    android:minHeight="50dp"
+                    android:progress="0" />
+                <TextView
+                    android:id="@+id/level"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="1/3 Level Reached"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    />
+
+                <Button
+                    android:id="@+id/payment_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#FF9800"
+                    android:text="Click Here To Pay!"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/pass_created"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pass_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Student Pass"
+                    android:textAlignment="center"
+                    android:textColor="#FF9800"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Source :"
+                    android:textColor="#FF9800"
+                    android:textStyle="bold"
+                    android:textSize="21sp"/>
+                <TextView
+                    android:id="@+id/pass_source"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:hint="Source"
+                    android:textAlignment="textStart"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints"
+                    android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Destination :"
+                        android:textColor="#FF9800"
+                        android:textStyle="bold"
+                        android:textSize="21sp"/>
+                    <TextView
+                        android:id="@+id/pass_destination"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:hint="Destination"
+                        android:textAlignment="textStart"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="MissingConstraints"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Created On :"
+                        android:textColor="#FF9800"
+                        android:textStyle="bold"
+                        android:textSize="21sp"/>
+                    <TextView
+                        android:id="@+id/starting_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:hint="00/00/0000"
+                        android:textAlignment="textStart"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="MissingConstraints"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Completing On :"
+                        android:textColor="#FF9800"
+                        android:textStyle="bold"
+                        android:textSize="21sp"/>
+                    <TextView
+                        android:id="@+id/ending_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:hint="00/00/0000"
+                        android:textAlignment="textStart"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="MissingConstraints"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No. of Days Remained :"
+                        android:textColor="#FF9800"
+                        android:textStyle="bold"
+                        android:textSize="21sp"/>
+                    <TextView
+                        android:id="@+id/days_remained"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:hint="20"
+                        android:textAlignment="textStart"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="MissingConstraints"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/scan_pass"
+                    android:layout_width="match_parent"
+                    android:text="Scan Pass"
+                    android:backgroundTint="#FF9800"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/renew_pass"
+                    android:layout_width="match_parent"
+                    android:text="Renew Pass"
+                    android:visibility="gone"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="#FF9800"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_height="match_parent"/>
+
+                                <!--
+                                <ImageView
+                                    android:id="@+id/passqr"
+                                    android:layout_width="300dp"
+                                    android:layout_height="300dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="15dp"
+                                    app:srcCompat="@drawable/dashboard" />-->
+            </LinearLayout>
+            </LinearLayout>
+            </ScrollView>
+</androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

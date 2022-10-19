@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer"
+    android:background="@drawable/background_image_form"
+    android:orientation="vertical"
+    tools:context=".Ticket">
+
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="370dp"
+            android:layout_height="480dp"
+            android:layout_marginTop="150dp"
+            android:layout_gravity="center_horizontal"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="9dp">
+
+            <LinearLayout
+                android:id="@+id/get_no_tickets"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="60dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fill Appropriate Details:"
+                    android:textSize="32sp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#FF9800"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:focusable="false"
+                    android:textColorHint="#FF9800"
+                    android:hint="Source">
+
+                    <EditText
+                        android:id="@+id/source_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mehsana"
+                        android:focusable="false"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="23sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:focusable="false"
+                    android:textColorHint="#FF9800"
+                    android:hint="Destination">
+
+                    <EditText
+                        android:id="@+id/destination_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mehsana"
+                        android:textColor="@color/black"
+                        android:focusable="false"
+                        android:textStyle="bold"
+                        android:textSize="23sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:focusable="false"
+                    android:textColorHint="#FF9800"
+                    android:hint="Bus Number">
+
+                    <EditText
+                        android:id="@+id/bus_number_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:text="Mehsana"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="23sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:focusable="false"
+                    android:textColorHint="#FF9800"
+                    android:hint="No. Of Tickets">
+
+                    <EditText
+                        android:id="@+id/ticket_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxEms="1"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="23sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/create_ticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Next"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#FF9800" />
+            </LinearLayout>
+        <LinearLayout
+            android:id="@+id/select_payment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Payment Type:"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#FF9800"/>
+            <RadioGroup
+                android:id="@+id/choose_payment_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/online"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Payment With Google Pay"/>
+            <RadioButton
+                android:id="@+id/offline"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pay to the conductor directly/Offline"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/rupees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Total Ruppes to pay:"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:textColor="#FF9800"/>
+            <Button
+                android:id="@+id/get_qr"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="#ff9800"/>
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+</LinearLayout>

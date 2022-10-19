@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InstituteEditStudent"
+    android:orientation="vertical"
+    tools:ignore="MissingClass">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backgroundimage"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student List:"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:textSize="32sp"
+            android:layout_gravity="center_horizontal"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="45dp"
+            android:id="@+id/sourceList">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/edit_student_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

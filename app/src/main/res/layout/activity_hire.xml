@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile_background"
+    tools:context=".Hire"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Hire Bus"
+        android:textColor="#FF9800"
+        android:textSize="43sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="70dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteY="64dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="320dp"
+        android:layout_height="500dp"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="9dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="138dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fill  Details:"
+                android:textColor="#FF9800"
+                android:textSize="28sp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="87dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:layout_marginTop="20dp"
+                android:hint="Starting Date:"
+                android:textColorHint="#FF9800"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="109dp">
+
+                <EditText
+                    android:id="@+id/start_date_hire_bus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="179dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="Ending Date:"
+                android:textColorHint="#FF9800"
+                android:layout_marginTop="20dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="188dp">
+
+                <EditText
+                    android:id="@+id/end_date_hire_bus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="179dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:layout_marginTop="20dp"
+                android:hint="Nearest Station :"
+                android:textColorHint="#FF9800"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="278dp">
+
+
+                <EditText
+                    android:id="@+id/station_hire_bus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="179dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/show_buses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ff9800"
+                android:text="Show Buses:"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                tools:layout_editor_absoluteX="103dp"
+                tools:layout_editor_absoluteY="390dp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

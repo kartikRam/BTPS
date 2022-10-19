@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/close_dialog"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/close_window"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Student:"
+        android:textSize="42sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="2dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="45dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ViewFlipper
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:id="@+id/flipper_student_details"
+                android:foregroundGravity="center"
+                tools:ignore="MissingConstraints" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="22dp"
+                android:focusable="false"
+                android:textColorHint="#FF9800"
+                android:hint="Enrollment-No">
+                <EditText
+                    android:id="@+id/edit_student_enrollment_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="23sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:focusable="false"
+                android:textColorHint="#FF9800"
+                android:hint="E-Mail">
+
+                <EditText
+                    android:id="@+id/edit_student_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="23sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:focusable="false"
+                android:textColorHint="#FF9800"
+                android:hint="Name">
+
+                <EditText
+                    android:id="@+id/edit_student_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:completionThreshold="1"
+                    android:textSize="23sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="22dp"
+                android:focusable="false"
+                android:textColorHint="#FF9800"
+                android:hint="Password">
+                <EditText
+                    android:id="@+id/edit_student_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:inputType="textPassword"
+                    android:textSize="23sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/edit_student_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:text="Edit"
+                android:textColor="#FFFFFF"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:backgroundTint="#FF9800" />
+            </LinearLayout>
+        </ScrollView>
+        </LinearLayout>
+
+</LinearLayout>
