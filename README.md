@@ -1,4 +1,4 @@
-# BTPS
+# BTPS(Bus Ticket and Pass System)
 
  Abstract <hr>
 Seeing students/passengers wasting their time, standing in longer queue for 2-3 hours, to generate their bus pass in order to travel to their educational institute or desired destination. 
