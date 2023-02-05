@@ -1,6 +1,6 @@
 # BTPS(Bus Ticket and Pass System)
 ## Working Video <hr>
-#### [This is an video of working Application](https://www.genome.gov/)
+#### [Click here to view the video of working Application!!](https://drive.google.com/file/d/1MtzchKHWBXEAzInLlEOUNTcT6yB6p9MU/view?usp=sharing)
 
 ## Abstract <hr>
 #### Seeing students/passengers wasting their time, standing in longer queue for 2-3 hours, to generate their bus pass in order to travel to their educational institute or desired destination. 
